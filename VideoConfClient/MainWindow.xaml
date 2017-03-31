@@ -5,8 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VideoConfClient"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="VideoConfClient"
+        WindowStyle="None"
+        ResizeMode="NoResize"  
+        WindowStartupLocation="CenterScreen"
+        WindowState="Maximized">
+    <Grid Width="{Binding Path=ActualHeight, RelativeSource={RelativeSource Self}}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="16*" />
+            <RowDefinition Height="9*" />
+            <RowDefinition Height="16*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="16*" />
+            <ColumnDefinition Width="9*" />
+            <ColumnDefinition Width="16*" />
+        </Grid.ColumnDefinitions>
+        <Image x:Name="image" Grid.Row="1" Grid.Column="0"/>
+        <Image x:Name="image90" Grid.Row="0" Grid.Column="1"/>
+        <Image x:Name="image180" Grid.Row="1" Grid.Column="2"/>
+        <Image x:Name="image270" Grid.Row="2" Grid.Column="1"/>
     </Grid>
 </Window>
