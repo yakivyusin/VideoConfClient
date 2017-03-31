@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using System.Windows;
+using System.Windows.Input;
 using VideoConfClient.Core;
 
 namespace VideoConfClient
@@ -14,6 +15,8 @@ namespace VideoConfClient
         public MainWindow()
         {
             InitializeComponent();
+            Mouse.OverrideCursor = Cursors.None;
+
             interaction = new MainWindowInteraction(image, image90, image180, image270);
         }
 
