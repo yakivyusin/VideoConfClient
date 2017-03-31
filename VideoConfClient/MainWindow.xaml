@@ -9,7 +9,8 @@
         WindowStyle="None"
         ResizeMode="NoResize"  
         WindowStartupLocation="CenterScreen"
-        WindowState="Maximized">
+        WindowState="Maximized"
+        Closing="ApplicationClose" >
     <Grid Width="{Binding Path=ActualHeight, RelativeSource={RelativeSource Self}}">
         <Grid.RowDefinitions>
             <RowDefinition Height="16*" />

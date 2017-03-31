@@ -71,6 +71,8 @@
     <Compile Include="Core\MainWindowInteraction.cs" />
     <Compile Include="Core\WebSocketClient.cs" />
     <Compile Include="Helpers\AppConfig.cs" />
+    <Compile Include="Helpers\ByteArrayExtensions.cs" />
+    <Compile Include="Helpers\BitmapImageExtensions.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
