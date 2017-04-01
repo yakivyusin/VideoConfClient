@@ -1,4 +1,5 @@
-﻿using System.Configuration;
+﻿using System;
+using System.Configuration;
 
 namespace VideoConfClient.Helpers
 {
@@ -15,6 +16,20 @@ namespace VideoConfClient.Helpers
             get
             {
                 return ConfigurationManager.AppSettings["ServerMainImageEndpoint"];
+            }
+        }
+
+        /// <summary>
+        /// Represents position of main image (without rotation).
+        /// Numeration starts from 0 - left image (1 - top image, 2 - right image, 3 - bottom image).
+        /// </summary>
+        public static int MainImageIndex
+        {
+            get
+            {
+                int index;
+                int.TryParse(ConfigurationManager.AppSettings["MainImageIndex"], out index);
+                return index;
             }
         }
     }

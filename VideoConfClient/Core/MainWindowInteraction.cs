@@ -40,13 +40,14 @@ namespace VideoConfClient.Core
 
         private void UpdateImages(byte[] imageBytes)
         {
+            var originalImageIndex = AppConfig.MainImageIndex;
             var originalImage = imageBytes.ToBitmapImage();
-            viewImages[0].Source = originalImage;
+            viewImages[originalImageIndex].Source = originalImage;
 
-            for (int i = 1; i < viewImages.Length; i++)
+            for (int i = originalImageIndex + 1; i < viewImages.Length + originalImageIndex; i++)
             {
                 var rotated = originalImage.Rotate();
-                viewImages[i].Source = rotated;
+                viewImages[i % viewImages.Length].Source = rotated;
                 originalImage = rotated;
             }
         }
