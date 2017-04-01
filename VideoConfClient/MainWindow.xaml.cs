@@ -2,6 +2,7 @@
 using System.Windows;
 using System.Windows.Input;
 using VideoConfClient.Core;
+using VideoConfClient.Helpers;
 
 namespace VideoConfClient
 {
@@ -23,6 +24,14 @@ namespace VideoConfClient
         public void ApplicationClose(object sender, CancelEventArgs e)
         {
             interaction.Close();
+        }
+
+        public GridLength Ratio
+        {
+            get
+            {
+                return new GridLength(AppConfig.AspectRatio, GridUnitType.Star);
+            }
         }
     }
 }

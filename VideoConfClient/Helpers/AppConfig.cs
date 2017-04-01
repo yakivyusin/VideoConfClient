@@ -1,5 +1,4 @@
-﻿using System;
-using System.Configuration;
+﻿using System.Configuration;
 
 namespace VideoConfClient.Helpers
 {
@@ -30,6 +29,19 @@ namespace VideoConfClient.Helpers
                 int index;
                 int.TryParse(ConfigurationManager.AppSettings["MainImageIndex"], out index);
                 return index;
+            }
+        }
+
+        /// <summary>
+        /// Represents aspect ratio of video frame.
+        /// </summary>
+        public static double AspectRatio
+        {
+            get
+            {
+                double ratio;
+                double.TryParse(ConfigurationManager.AppSettings["AspectRatio"], out ratio);
+                return ratio;
             }
         }
     }

@@ -11,17 +11,18 @@
         WindowStartupLocation="CenterScreen"
         WindowState="Maximized"
         Closing="ApplicationClose"
-        Background="Black">
+        Background="Black"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}" >
     <Grid Width="{Binding Path=ActualHeight, RelativeSource={RelativeSource Self}}">
         <Grid.RowDefinitions>
-            <RowDefinition Height="16*" />
-            <RowDefinition Height="9*" />
-            <RowDefinition Height="16*" />
+            <RowDefinition Height="{Binding Ratio}" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="{Binding Ratio}" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="16*" />
-            <ColumnDefinition Width="9*" />
-            <ColumnDefinition Width="16*" />
+            <ColumnDefinition Width="{Binding Ratio}" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="{Binding Ratio}" />
         </Grid.ColumnDefinitions>
         <Image x:Name="image" Grid.Row="1" Grid.Column="0"/>
         <Image x:Name="image90" Grid.Row="0" Grid.Column="1"/>
