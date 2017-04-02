@@ -33,7 +33,7 @@ namespace VideoConfClient.Core
         {
             if (e.IsBinary)
             {
-                Application.Current.Dispatcher.BeginInvoke(DispatcherPriority.Normal,
+                Application.Current.Dispatcher.BeginInvoke(DispatcherPriority.Background,
                     new Action(() => UpdateImages(e.RawData)));
             }
         }
