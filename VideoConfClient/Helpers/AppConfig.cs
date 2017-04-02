@@ -33,7 +33,7 @@ namespace VideoConfClient.Helpers
         }
 
         /// <summary>
-        /// Represents aspect ratio of video frame.
+        /// Represents aspect ratio of left image frame.
         /// </summary>
         public static double AspectRatio
         {
