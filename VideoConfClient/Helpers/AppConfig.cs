@@ -33,9 +33,9 @@ namespace VideoConfClient.Helpers
         }
 
         /// <summary>
-        /// Represents aspect ratio of left image frame.
+        /// Represents aspect ratio of main image.
         /// </summary>
-        public static double AspectRatio
+        public static double MainImageAspectRatio
         {
             get
             {

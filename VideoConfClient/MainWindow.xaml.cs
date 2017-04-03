@@ -30,7 +30,10 @@ namespace VideoConfClient
         {
             get
             {
-                return new GridLength(AppConfig.AspectRatio, GridUnitType.Star);
+                return new GridLength(
+                    AppConfig.MainImageIndex % 2 == 0 ?
+                    AppConfig.MainImageAspectRatio :
+                    1 / AppConfig.MainImageAspectRatio, GridUnitType.Star);
             }
         }
     }
