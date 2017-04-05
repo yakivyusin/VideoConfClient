@@ -4,7 +4,7 @@ using System.Windows.Input;
 using VideoConfClient.Core;
 using VideoConfClient.Helpers;
 
-namespace VideoConfClient
+namespace VideoConfClient.Views
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
