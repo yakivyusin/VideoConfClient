@@ -1,31 +1,35 @@
-## Стек
+## What is it?
+This is one part of the educational project, the purpose of which was the creation of 3D Videoconferencing System ([based on a such pyramid](https://i.ytimg.com/vi/LbGvM5THvzA/maxresdefault.jpg)). This is a client application that receives an image from the server and creates its scan for display on the pyramid.
+
+## Stack
 .NET Framework 4.5.2, WPF, C#
 
-## NuGet зависимости
+## NuGet Dependencies
 websocket-sharp by sta ([GitHub](https://github.com/sta/websocket-sharp))
 
-## Клиент
+## Client
 
- - Не использует MVVM для повышения быстродействия.
- - Привязка данных используется только для верстки самого экрана, не для отображения.
+### Some features
 
-### Конфигурация клиента
+ - Does not use MVVM to improve performance.
+ - Data binding is used only for the layout of the screen itself, not for display.
 
- - ServerMainImageEndpoint: полная строка подключения к серверу, например ws://localhost:8888/main
- - MainImageIndex: указывает местоположение на экране "главного" изображения (которая не подвергается поворотам). 0 - слева, 1 - сверху, 2 - справа, 3 - снизу
- - AspectRatio: указывает соотношение ширины к высоте "главного" изображения. > 1 - ширина больше высоты, <1 - ширина меньше высоты.
+### Configuration
 
-### Примеры настроек:
+ - ServerMainImageEndpoint: Full connection string to server, e.g. ws://localhost:8888/main
+ - MainImageIndex: It indicates the location on the screen of the "main" image (which is not subjected to rotations): 0 - left, 1 - top, 2 - right, 3 - bottom.
+ - AspectRatio: It indicates the aspect ratio of "main" image.
+
+### Configuration Examples
 
     MainImageIndex = 0, AspectRatio = 1,77777778
 
-"Главное" изображение отображается слева и имеет соотношение сторон 16:9.
+The "main" image is displayed on the left and has a 16:9 aspect ratio.
 
     MainImageIndex = 1, AspectRatio = 1,77777778
 
-"Главное" изображение отображается сверху и имеет соотношение сторон 16:9.
+The "main" image is displayed on the top and has a 16:9 aspect ratio.
 
     MainImageIndex = 1, AspectRatio = 0,75
 
-"Главное" изображение отображается сверху и имеет соотношение сторон 3:4.
- 
+The "main" image is displayed on the top and has a 3:4 aspect ratio.
